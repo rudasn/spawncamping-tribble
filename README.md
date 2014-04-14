@@ -53,6 +53,11 @@ START(1)
 
 will send a message per minute to the chat. Calling the START method multiple times stops the previous interval and creates a new one. You can also call the global ```msg`` function to send a chat message "manually". These functions are defined in ``www/js/controllers.js``.
 
+Use the ``START`` and ``msg`` methods to debug.
+
 **THE ISSUE**
 
-If you define an internal greater than a minute the android app drops the Firebase connection and the logs don't say anything about that. The locally running app keeps the connection indefinitely.
+If you define an internal greater than a minute (or so) the android app drops the Firebase connection and the logs don't say anything about that. 
+
+Sometimes the android app is unable to send new messages but is able to receive. Sometimes it doesn't do anything. 
+
